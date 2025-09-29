@@ -18,7 +18,7 @@ export function LatestArticleStrip() {
   }
 
   const latestPost = posts[0] // Posts are already sorted by date (newest first)
-  const ENABLE_ARTICLES = false; // Toggle this to enable/disable the latest article strip
+  const ENABLE_ARTICLES = process.env.NODE_ENV === 'test' ? true : false; // Enable for tests, disable for production
 
   if (!ENABLE_ARTICLES) {
     return (

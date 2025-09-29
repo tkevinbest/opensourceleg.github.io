@@ -83,9 +83,9 @@ export default function Home() {
       {/* Features Section */}
       <div className="bg-[var(--black)] text-white relative overflow-hidden -mt-24 sm:-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 min-h-[60vh] sm:h-[60vh] flex items-center">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center w-full h-full py-20 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center w-full h-full py-16 sm:py-20 lg:py-24">
             {/* Left Content - Video */}
-            <div className="h-full flex items-center order-2 lg:order-1">
+            <div className="h-full flex items-center order-2 lg:order-1 mb-8 lg:mb-0">
               {/* YouTube Video Embed */}
               <div className="border border-[var(--white)] relative w-full h-0 pb-[56.25%] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
                 <iframe
@@ -206,7 +206,7 @@ export default function Home() {
           </div>
 
           {/* Tool panels */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {toolPanels.map((tool) => {
               const IconComponent = tool.icon
               return (
@@ -246,7 +246,7 @@ export default function Home() {
 
       {/* Hardware Section */}
       <div className="bg-[var(--black)] max-w-7xl mx-auto rounded-2xl sm:rounded-[2rem] text-white py-16 sm:py-20 px-6 sm:px-12 lg:px-20 my-24">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 flex flex-col gap-3 sm:gap-4 justify-center">
             {/* Main headline */}
@@ -307,9 +307,9 @@ export default function Home() {
       {/* Software Section */}
       <div className="py-16 sm:py-20 px-4 sm:px-6 my-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left Content - Software Screenshot */}
-            <div className="w-[70%] lg:w-[80%] xl:w-[90%] rounded-2xl sm:rounded-[2rem] overflow-hidden border-2 border-[var(--black)]">
+            <div className="w-full lg:w-[80%] xl:w-[90%] rounded-2xl sm:rounded-[2rem] overflow-hidden border-2 border-[var(--black)]">
               <Image src="/software.png" alt="Open-Source Leg Software" width={800} height={800} className="w-full h-auto object-contain" />
             </div>
 
@@ -374,7 +374,7 @@ export default function Home() {
 
       {/* Research Section */}
       <div className="bg-[var(--light-blue)] max-w-7xl mx-auto rounded-2xl sm:rounded-[2rem] text-white py-16 sm:py-20 px-6 sm:px-12 lg:px-20 mb-16 sm:mb-24">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 flex flex-col gap-3 sm:gap-4 justify-center">
             {/* Main headline */}
@@ -482,7 +482,7 @@ export default function Home() {
           </div>
 
           {/* stats panels */}
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {statsPanels.map((stat) => {
               const TrendIcon = stat.trend === "up" ? TrendingUpIcon : TrendingDownIcon
               const trendColor = stat.trend === "up" ? "text-green-600" : "text-red-600"
@@ -528,7 +528,7 @@ export default function Home() {
         {/* Community Section */}
         <div className="bg-[var(--light-blue)] py-16 sm:py-20 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               {/* Left Content */}
               <div className="space-y-6 sm:space-y-8">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  text-white">
