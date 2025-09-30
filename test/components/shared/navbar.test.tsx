@@ -346,9 +346,9 @@ describe('Navbar Component', () => {
   describe('Desktop Navigation', () => {
     it('renders desktop navigation menu', () => {
       render(<Navbar />)
-      
+
       // Desktop navigation should be hidden on mobile, visible on desktop
-      const desktopNavContainer = document.querySelector('.hidden.lg\\:flex')
+      const desktopNavContainer = document.querySelector('.hidden.md\\:flex')
       expect(desktopNavContainer).toBeInTheDocument()
     })
 
@@ -364,17 +364,17 @@ describe('Navbar Component', () => {
   describe('Responsive Behavior', () => {
     it('hides desktop navigation on mobile', () => {
       render(<Navbar />)
-      
-      const desktopNavContainer = document.querySelector('.hidden.lg\\:flex')
+
+      const desktopNavContainer = document.querySelector('.hidden.md\\:flex')
       expect(desktopNavContainer).toBeInTheDocument()
-      expect(desktopNavContainer).toHaveClass('hidden', 'lg:flex')
+      expect(desktopNavContainer).toHaveClass('hidden', 'md:flex')
     })
 
     it('shows mobile menu button on mobile', () => {
       render(<Navbar />)
-      
+
       const mobileMenuButton = screen.getByLabelText('Toggle mobile menu')
-      expect(mobileMenuButton).toHaveClass('lg:hidden')
+      expect(mobileMenuButton).toHaveClass('md:hidden')
     })
   })
 

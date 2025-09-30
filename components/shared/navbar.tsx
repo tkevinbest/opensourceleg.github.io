@@ -86,7 +86,7 @@ export default function Navbar() {
               </Link>
               
               {/* Desktop Navigation Menu */}
-              <div className="hidden lg:flex lg:items-center lg:gap-4">
+              <div className="hidden md:flex md:items-center md:gap-4">
                 <NavigationMenu viewport={false}>
                   <NavigationMenuList>
                     {navigationConfig.map((section) => (
@@ -175,7 +175,7 @@ export default function Navbar() {
 
               {/* Mobile Hamburger Button */}
               <button
-                className="lg:hidden p-2 hover:bg-accent rounded-md transition-colors"
+                className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle mobile menu"
               >
@@ -192,7 +192,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
