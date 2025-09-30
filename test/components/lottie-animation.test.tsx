@@ -46,7 +46,7 @@ describe('LottieAnimation Component', () => {
     const { container } = render(<LottieAnimation />)
     
     const wrapper = container.firstChild as HTMLElement
-    expect(wrapper).toHaveClass('w-56', 'h-56', 'sm:w-64', 'sm:h-64', 'md:w-72', 'md:h-72', 'lg:w-80', 'lg:h-80', 'mb-2', 'sm:mb-4')
+    expect(wrapper).toHaveClass('w-56', 'h-56', 'sm:w-64', 'sm:h-64', 'md:w-72', 'md:h-72', 'lg:w-90', 'lg:h-90', 'mb-2', 'sm:mb-4')
   })
 
   it('has responsive sizing classes', () => {
@@ -59,6 +59,6 @@ describe('LottieAnimation Component', () => {
     expect(classString).toContain('w-56') // base size
     expect(classString).toContain('sm:w-64') // small screens
     expect(classString).toContain('md:w-72') // medium screens  
-    expect(classString).toContain('lg:w-80') // large screens
+    expect(classString).toContain('lg:w-90') // large screens
   })
 }) 
