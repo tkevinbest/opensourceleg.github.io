@@ -19,15 +19,15 @@ export default function Footer() {
       links: [
         { title: "Overview", href: "/software" },
         { title: "API Documentation", href: "https://neurobionics.github.io/opensourceleg/" },
-        { title: "Tutorials", href: "#" },
+        { title: "Source", href: "https://github.com/neurobionics/opensourceleg" },
       ]
     },
     {
       title: "Research",
       links: [
-        { title: "Overview", href: "/research" },
         { title: "Controllers", href: "/research/controllers" },
-        { title: "Datasets", href: "#" },
+        { title: "Publications", href: "/research" },
+        { title: "Add Your Publication", href: process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || "#" },
       ]
     },
     {
@@ -63,7 +63,7 @@ export default function Footer() {
     },
     { 
       name: "Contact", 
-      href: "/contact", 
+      href: "mailto:opensourceleg@gmail.com", 
       icon: Mail 
     }
   ]

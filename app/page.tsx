@@ -282,7 +282,7 @@ export default function Home() {
                     View on Onshape
                   </Button>
                   <Button
-                    href="/tutorials"
+                    href="/hardware/tutorials"
                     className="max-xl:hidden bg-transparent text-white border border-white hover:bg-[var(--light-blue)] hover:text-black rounded-md px-4 sm:px-6 py-4 sm:py-6 text-sm sm:text-base font-medium"
                   >
                     Tutorials <VideotapeIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
@@ -403,16 +403,16 @@ export default function Home() {
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start">
                   <Button
-                    href="/downloads"
+                    href="/research/controllers"
                     className="bg-transparent text-white border border-white hover:bg-[var(--white)] hover:text-black rounded-md px-4 sm:px-6 py-4 sm:py-6 text-sm sm:text-base font-medium"
                   >
                     Downloads <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </Button>
                   <Button
-                    href="/datasets"
+                    href="/research"
                     className="bg-transparent text-white border border-white hover:bg-[var(--white)] hover:text-black rounded-md px-4 sm:px-6 py-4 sm:py-6 text-sm sm:text-base font-medium"
                   >
-                    Datasets <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                    Publications <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </Button>   
                   <Button
                     href="/research"

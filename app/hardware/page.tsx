@@ -485,7 +485,7 @@ export default function Hardware() {
                     
                     <Button 
                       variant="outline"
-                      href="/contact"
+                      href="mailto:opensourceleg@gmail.com"
                       className="flex-1 bg-white border-black text-black hover:bg-[var(--light-green)] hover:text-black rounded-lg px-4 text-base sm:text-lg flex items-center justify-center gap-2"
                     >
                       <ArrowUpRight className="w-4 h-4" />

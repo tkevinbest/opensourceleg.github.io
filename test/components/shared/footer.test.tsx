@@ -148,15 +148,6 @@ describe('Footer Component', () => {
         expect(apiDocLink).toBeInTheDocument()
         expect(screen.getByText('API Documentation')).toBeInTheDocument()
       })
-
-      it('handles placeholder links correctly', () => {
-        render(<Footer />)
-        
-        const tutorialsLinks = screen.getAllByRole('link', { name: 'Tutorials' })
-        // Find the one in software section (second occurrence)
-        expect(tutorialsLinks.length).toBeGreaterThan(1)
-        expect(tutorialsLinks[1]).toHaveAttribute('href', '#')
-      })
     })
 
     describe('Research Section', () => {
@@ -164,13 +155,13 @@ describe('Footer Component', () => {
         render(<Footer />)
         
         // Find research overview link specifically
-        const overviewLinks = screen.getAllByRole('link', { name: 'Overview' })
+        const overviewLinks = screen.getAllByRole('link', { name: 'Publications' })
         const researchOverview = overviewLinks.find(link => 
           link.getAttribute('href') === '/research'
         )
         expect(researchOverview).toBeInTheDocument()
         expect(screen.getByRole('link', { name: 'Controllers' })).toHaveAttribute('href', '/research/controllers')
-        expect(screen.getByRole('link', { name: 'Datasets' })).toHaveAttribute('href', '#')
+        expect(screen.getByRole('link', { name: 'Add Your Publication' })).toHaveAttribute('href', process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || '#')
       })
     })
 
@@ -340,7 +331,7 @@ describe('Footer Component', () => {
       expect(screen.getByLabelText('GitHub')).toHaveAttribute('href', 'https://github.com/opensourceleg')
       expect(screen.getByLabelText('Twitter')).toHaveAttribute('href', 'https://twitter.com/opensourceleg')
       expect(screen.getByLabelText('LinkedIn')).toHaveAttribute('href', 'https://linkedin.com/company/opensourceleg')
-      expect(screen.getByLabelText('Contact')).toHaveAttribute('href', '/contact')
+      expect(screen.getByLabelText('Contact')).toHaveAttribute('href', 'mailto:opensourceleg@gmail.com')
     })
 
     it('has correct external documentation URLs', () => {
@@ -466,7 +457,7 @@ describe('Footer Component', () => {
       render(<Footer />)
       
       expect(screen.getByRole('link', { name: 'Contact Us' })).toHaveAttribute('href', 'mailto:opensourceleg@gmail.com')
-      expect(screen.getByLabelText('Contact')).toHaveAttribute('href', '/contact')
+      expect(screen.getByLabelText('Contact')).toHaveAttribute('href', 'mailto:opensourceleg@gmail.com')
     })
   })
 
