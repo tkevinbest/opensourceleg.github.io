@@ -738,7 +738,7 @@ export const v2Electronics = [
 	{
 		title: "Preparing the Load Cell",
 		videoUrl:
-			"https://drive.google.com/file/d/1XiSC4C09oYCrYdqzYpTVuKx_o6bLa5qG/view", 
+			"https://drive.google.com/file/d/1OiroaF2NL5oZ5z7ydkTOmYRou99CBfPJ/preview", 
 
 		partsRequired: [
 			{
