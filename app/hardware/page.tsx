@@ -386,7 +386,7 @@ export default function Hardware() {
                    </Button>
                    
                    <Button 
-                     href="/tutorials"
+                     href="/hardware/tutorials"
                      className="w-full h-full bg-[var(--white)] text-black hover:bg-[var(--light-green)] hover:text-black border border-black rounded-lg p-4 text-sm sm:text-base font-medium flex flex-col items-center justify-center gap-3 text-center"
                    >
                      <ArrowUpRight className="w-6 h-6 flex-shrink-0" />
