@@ -28,8 +28,12 @@ export const controllers: Controller[] = [
     title: "Data-Driven Variable Impedance Control for Variable Activities",
     authors: "T. K. Best, C. G. Welker, R. J. Cortino and R. D. Gregg",
     description: {
-      short: "Our Locomotor Control Systems Lab has pioneered a new prosthesis control approach that utilizes a phase variable and continuous impedance/kinematic functions in lieu of a finite state machine. We use convex optimization to automatically identify optimal impedance and kinematic profiles based on able-bodied data, resulting in biomimetic joint kinematics and kinetics without manual tuning for walking, sit/stand, and stairs.",
-      long: "Our controller allows a user to perform various ambulation activities, including sit/stand, walking at various speeds and inclines, and ascending and descending stairs. In automatic classification mode, it can automatically handle switching between walking and sit/stand modes. Specific task properties, such as ground slope, walking speed, and stair steepness can be set by the user. Potential uses of this software release include but are not limited to: using our controller as a comparison point for a novel walking controller; using our controller as a component in a larger, more complex controller; using our controller when researching other related topics, such as balance or metabolic cost."
+      short: "The Locomotor Control Systems Lab has pioneered a new prosthesis control approach that utilizes a phase variable and continuous impedance/kinematic functions in lieu of a finite state machine. We use convex optimization to automatically identify optimal impedance and kinematic profiles based on able-bodied data, resulting in biomimetic joint kinematics and kinetics without manual tuning for walking, sit/stand, and stairs.",
+      long: `This controller allows a user to perform various ambulation activities, including sit/stand, walking at various speeds and inclines, and ascending and descending stairs. In automatic classification mode, it can automatically handle switching between walking and sit/stand modes. Specific task properties, such as ground slope, walking speed, and stair steepness can be set by the user.
+
+Potential uses of this software release include but are not limited to: using our controller as a comparison point for a novel walking controller; using our controller as a component in a larger, more complex controller; using our controller when researching other related topics, such as balance or metabolic cost.
+
+The release also includes an impedance compensation algorithm that accounts for actuator and belt dynamics, improving the accuracy of the OSL's rendered impedance.`
     },
     image: "/research/kevin-controller.webp",
     date: "Dec 9th, 2025",

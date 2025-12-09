@@ -362,7 +362,11 @@ export function ControllersPageClient({ controllers }: ControllersPageClientProp
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2 italic">Description</h4>
                     <p className="text-sm text-gray-600 mb-3 text-justify">{selectedController.description.short}</p>
-                    <p className="text-sm text-gray-600 text-justify">{selectedController.description.long}</p>
+                    <div className="space-y-3">
+                      {selectedController.description.long.split('\n\n').map((paragraph, i) => (
+                        <p key={i} className="text-sm text-gray-600 text-justify">{paragraph}</p>
+                      ))}
+                    </div>
                   </div>                  
                   
                   <div>
