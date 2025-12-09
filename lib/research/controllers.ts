@@ -9,7 +9,8 @@ export interface Controller {
   image: string
   date: string
   license: string
-  citation: string
+  // Support either a single citation string or multiple citations
+  citation?: string | string[]
   copyright: {
     year: string
     line1: string
@@ -25,24 +26,30 @@ export const controllers: Controller[] = [
   {
     id: "variable-impedance-control",
     title: "Data-Driven Variable Impedance Control for Variable Activities",
-    authors: "T. K. Best, C. G. Welker, and R. D. Gregg",
+    authors: "T. K. Best, C. G. Welker, R. J. Cortino and R. D. Gregg",
     description: {
-      short: "Our Locomotor Control Systems Lab has pioneered a new approach utilizing a phase variable and continuous impedance parameter functions in lieu of a finite state machine. We use convex optimization to automatically identify optimal impedance parameter functions, resulting in biomimetic joint kinematics and kinetics without manual tuning.",
-      long: "Our controller allows a user to sit, stand, and walk across level ground, and it automatically handles switching between walking and sit/stand modes. Potential uses of this software release include but are not limited to: using our controller as a comparison point for a novel walking controller; using our controller as a component in a larger, more complex controller; using our controller when researching other related topics, such as balance or metabolic cost."
+      short: "Our Locomotor Control Systems Lab has pioneered a new prosthesis control approach that utilizes a phase variable and continuous impedance/kinematic functions in lieu of a finite state machine. We use convex optimization to automatically identify optimal impedance and kinematic profiles based on able-bodied data, resulting in biomimetic joint kinematics and kinetics without manual tuning for walking, sit/stand, and stairs.",
+      long: "Our controller allows a user to perform various ambulation activities, including sit/stand, walking at various speeds and inclines, and ascending and descending stairs. In automatic classification mode, it can automatically handle switching between walking and sit/stand modes. Specific task properties, such as ground slope, walking speed, and stair steepness can be set by the user. Potential uses of this software release include but are not limited to: using our controller as a comparison point for a novel walking controller; using our controller as a component in a larger, more complex controller; using our controller when researching other related topics, such as balance or metabolic cost."
     },
     image: "/research/kevin-controller.webp",
-    date: "Dec 20th, 2023",
+    date: "Dec 9th, 2025",
     license: "Polyform Non-Commercial",
-    citation: "T. K. Best, C. G. Welker, E. J. Rouse and R. D. Gregg, 'Data-Driven Variable Impedance Control of a Powered Knee–Ankle Prosthesis for Adaptive Speed and Incline Walking,' in IEEE Transactions on Robotics, vol. 39, no. 3, pp. 2151-2169, June 2023, doi: 10.1109/TRO.2022.3226887",
+    citation: [
+      "T. Kevin Best, Cara Gonzalez-Welker, Elliott J. Rouse and Robert D. Gregg, 'Data-Driven Variable Impedance Control of a Powered Knee–Ankle Prosthesis for Adaptive Speed and Incline Walking,' in IEEE Transactions on Robotics, vol. 39, no. 3, pp. 2151-2169, June 2023, doi: 10.1109/TRO.2022.3226887",
+      "Cara Gonzalez-Welker, T. Kevin Best and Robert D. Gregg, 'Improving Sit/Stand Loading Symmetry and Timing Through Unified Variable Impedance Control of a Powered Knee-Ankle Prosthesis,' in IEEE Transactions on Neural Systems and Rehabilitation Engineering, doi: 10.1109/TNSRE.2023.3320692",
+      "Ross J. Cortino, T. K. Best and Robert D. Gregg, 'Data-Driven Phase-Based Control of a Powered Knee-Ankle Prosthesis for Variable-Incline Stair Ascent and Descent,' in IEEE Transactions on Medical Robotics and Bionics, vol. 6, no. 1, pp. 175-188, Feb. 2024, doi: 10.1109/TMRB.2023.3328656.",
+      "T. Kevin Best, Gray C. Thomas, Senthur R. Ayyappan, Robert D. Gregg and Elliott J. Rouse, 'A Compensated Open-Loop Impedance Controller Evaluated on the Second Generation Open-Source Leg Prosthesis,' in IEEE/ASME Transactions on Mechatronics, doi: 10.1109/TMECH.2024.3508469."
+    ],
     copyright: {
       year: "2022",
       line1: "The Regents of the University of Michigan",
       line2: "Locomotor Control Systems Laboratory"
     },
     url: "https://available-inventions.umich.edu/product/data-driven-variable-impedance-control-of-a-powered-knee-ankle-prosthesis-for-variable-activities",
-    tags: ["Variable Impedance", "Walking", "Sitting", "Standing", "Phase Variable"],
+    tags: ["Variable Impedance", "Walking", "Sitting", "Standing","Stairs","Ramps", "Phase Variable"],
     institution: "University of Michigan",
-    lab: "Locomotor Control Systems Lab"
+    lab: "Locomotor Control Systems Lab",
+    
   },
   {
     id: "myoelectric-control",

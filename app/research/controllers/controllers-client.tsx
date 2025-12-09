@@ -363,13 +363,25 @@ export function ControllersPageClient({ controllers }: ControllersPageClientProp
                     <h4 className="font-medium text-gray-900 mb-2 italic">Description</h4>
                     <p className="text-sm text-gray-600 mb-3 text-justify">{selectedController.description.short}</p>
                     <p className="text-sm text-gray-600 text-justify">{selectedController.description.long}</p>
-                  </div>
+                  </div>                  
                   
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2 italic">Citation</h4>
-                    <p className="text-xs text-gray-600 bg-gray-50 p-3 rounded border font-mono">
-                      {selectedController.citation}
-                    </p>
+                      {selectedController.citation ? (
+                        Array.isArray(selectedController.citation) ? (
+                          <ul className="list-disc pl-5 space-y-1 bg-gray-50 p-3 rounded border font-mono text-xs text-gray-600">
+                            {selectedController.citation.map((c, i) => (
+                              <li key={i} className="m-0">{c}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-xs text-gray-600 bg-gray-50 p-3 rounded border font-mono">
+                            {selectedController.citation}
+                          </p>
+                        )
+                      ) : (
+                        <p className="text-xs text-gray-500">No citation provided.</p>
+                      )}
                   </div>               
                   
                   <div>
